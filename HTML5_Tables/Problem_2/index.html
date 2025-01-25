@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Results</title>
+    <style>
+        /* Center table and collapse borders */
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 400px; /* optional, adjust as desired */
+        }
+        /* Style the caption (table title) */
+        caption {
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 8px;
+        }
+        /* Give all table cells a border and some padding */
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        /* Light background for column headers */
+        thead th {
+            background-color: #f1f1f1;
+        }
+        /* Make the footer cell bold */
+        tfoot td {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <!-- Table title -->
+    <caption>Web fundamentals exam results</caption>
+
+    <!-- Table header -->
+    <thead>
+    <tr>
+        <th>N°</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Score</th>
+    </tr>
+    </thead>
+
+    <!-- Table body -->
+    <tbody>
+    <tr>
+        <td>01</td>
+        <td>Gosho</td>
+        <td>Goshev</td>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>02</td>
+        <td>Tosho</td>
+        <td>Toshev</td>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>03</td>
+        <td>Pesho</td>
+        <td>Peshev</td>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>04</td>
+        <td>Gencho</td>
+        <td>Genchev</td>
+        <td>500</td>
+    </tr>
+    <tr>
+        <td>05</td>
+        <td>Draga</td>
+        <td>Draganova</td>
+        <td>500</td>
+    </tr>
+    </tbody>
+
+    <!-- Table footer -->
+    <tfoot>
+    <tr>
+        <!-- One cell spanning all four columns -->
+        <td colspan="4">Average score from 05 participants: 500</td>
+    </tr>
+    </tfoot>
+
+</table>
+
+</body>
+</html>

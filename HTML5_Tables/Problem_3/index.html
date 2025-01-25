@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nested Tables Example</title>
+    <style>
+        /* Make borders visible, collapse them for a single border style */
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        /* Style all table cells */
+        td {
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+            vertical-align: middle;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Make nested table text larger */
+        .nested-table td {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Optional style for the logo */
+        .logo {
+            width: 150px;  /* Adjust as you like */
+            height: auto;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Main table -->
+<table>
+    <tr>
+        <!-- Left cell: Antra logo -->
+        <td>
+            <!-- Link opens in new tab via target="_blank" -->
+            <a href="https://antra.net/" target="_blank">
+                <!-- Replace the src with your actual (local or hosted) Antra logo if needed -->
+                <img
+                        src="https://antra.net/wp-content/uploads/2020/06/antra-logo.png"
+                        alt="Antra Logo"
+                        class="logo"
+                >
+            </a>
+        </td>
+
+        <!-- Right cell: Nested table -->
+        <td>
+            <table class="nested-table">
+                <tr>
+                    <td>Software</td>
+                </tr>
+                <tr>
+                    <td>Developer</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

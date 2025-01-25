@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Life in Antra Keyboard</title>
+    <style>
+        /* Make all table borders visible and use a single border style */
+        table {
+            border-collapse: collapse;
+            margin: 20px auto; /* center the table on the page */
+            border: 2px solid black;
+            width: 500px;      /* adjust as desired */
+        }
+        /* Style the cells */
+        td {
+            border: 2px solid black;
+            vertical-align: middle;
+            text-align: center;
+            padding: 10px;
+        }
+        /* “Antra Life” top cell */
+        .title-cell {
+            background-color: #eee;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 20px;
+        }
+        /* Style all the buttons with a simple gradient & purple text */
+        button {
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(#ccc, #999);
+            color: purple;
+            font-weight: bold;
+            font-size: 1em;
+            border: 1px solid #666;
+            cursor: pointer;
+        }
+        button:hover {
+            background: linear-gradient(#bbb, #888);
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <!-- ROW 1: Title “Antra Life” -->
+    <tr>
+        <!-- Single cell spanning all columns -->
+        <td colspan="4" class="title-cell">
+            Antra Life
+        </td>
+    </tr>
+
+    <!-- ROW 2: “Google” and “GitHub” (two wide cells) -->
+    <tr>
+        <td colspan="2">
+            <button onclick="window.open('https://www.google.com', '_blank')">
+                GOOGLE
+            </button>
+        </td>
+        <td colspan="2">
+            <button onclick="window.open('https://github.com', '_blank')">
+                GitHub
+            </button>
+        </td>
+    </tr>
+
+    <!-- ROW 3: Four cells: Facebook, GMail, YouTube, 2048 -->
+    <tr>
+        <td>
+            <button onclick="window.open('https://facebook.com', '_blank')">
+                Facebook
+            </button>
+        </td>
+        <td>
+            <button onclick="window.open('https://mail.google.com', '_blank')">
+                GMail
+            </button>
+        </td>
+        <td>
+            <button onclick="window.open('https://youtube.com', '_blank')">
+                YouTube
+            </button>
+        </td>
+        <td>
+            <button onclick="window.open('https://play2048.co', '_blank')">
+                2048
+            </button>
+        </td>
+    </tr>
+
+    <!-- ROW 4: Two cells: “Food” and “Game” -->
+    <tr>
+        <td colspan="2">
+            <button onclick="window.open('https://www.yelp.com', '_blank')">
+                Food
+            </button>
+        </td>
+        <td colspan="2">
+            <button onclick="window.open('https://store.steampowered.com', '_blank')">
+                Game
+            </button>
+        </td>
+    </tr>
+
+    <!-- ROW 5: Two cells: “Social life”, “Sleep” -->
+    <tr>
+        <td colspan="2">
+            <button onclick="window.open('https://www.meetup.com', '_blank')">
+                Social life
+            </button>
+        </td>
+        <td colspan="2">
+            <button onclick="window.open('https://sleepfoundation.org', '_blank')">
+                Sleep
+            </button>
+        </td>
+    </tr>
+
+    <!-- ROW 6: “Beer>>>” and “WC” -->
+    <tr>
+        <td colspan="3">
+            <button onclick="window.open('https://www.google.com/search?q=beer', '_blank')">
+                Beer &gt;&gt;&gt;
+            </button>
+        </td>
+        <td>
+            <button onclick="window.open('#', '_blank')">
+                WC
+            </button>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Table Layout</title>
+    <style>
+        /* Center the table on the page */
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        /* Add some spacing around cells */
+        td {
+            padding: 20px;
+            vertical-align: top;
+        }
+
+        /* Optional styling for images and headings */
+        img {
+            width: 120px;  /* Adjust size to your liking */
+            height: auto;
+            border-radius: 50%; /* makes these icon images circular */
+        }
+
+        .logo {
+            border-radius: 0; /* remove rounding for the Antra logo */
+            width: 150px;     /* or any preferred width */
+        }
+
+        h2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            max-width: 250px; /* limits paragraph width */
+            text-align: justify;
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Main table for layout -->
+<table>
+    <!-- First row: the Antra logo -->
+    <tr>
+        <td colspan="3">
+            <a href="https://antra.net/" target="_blank">
+                <!-- Direct link to Antra’s logo (or replace with your preferred image) -->
+                <img
+                        src="https://antra.net/wp-content/uploads/2020/06/antra-logo.png"
+                        alt="Antra Logo"
+                        class="logo"
+                >
+            </a>
+        </td>
+    </tr>
+
+    <!-- Second row: Three service columns -->
+    <tr>
+        <!-- Column 1: Business Advisory Services -->
+        <td>
+            <!-- Icon from icons8.com -->
+            <img
+                    src="https://img.icons8.com/color/96/handshake.png"
+                    alt="Business Advisory Icon"
+            >
+            <h2>Business Advisory Services</h2>
+            <p>
+                Our business advisory services assist our clients to align
+                IT capabilities with their business needs to drive growth
+                and productivity, hence deriving greater value from IT.
+                We continually seek better ways of collaborating with our clients.
+            </p>
+        </td>
+
+        <!-- Column 2: Technology Services -->
+        <td>
+            <!-- Updated icon for Technology Services -->
+            <img
+                    src="https://img.icons8.com/color/96/server.png"
+                    alt="Technology Services Icon"
+            >
+            <h2>Technology Services</h2>
+            <p>
+                Harness the power of emerging technologies while leveraging legacy IT.
+                Antra offers a full spectrum of technology services for businesses to
+                achieve their goals. Our orientation starts with core fundamentals.
+            </p>
+        </td>
+
+        <!-- Column 3: Professional Services -->
+        <td>
+            <img
+                    src="https://img.icons8.com/color/96/conference-call.png"
+                    alt="Professional Services Icon"
+            >
+            <h2>Professional Services</h2>
+            <p>
+                Our motto is to bridge skill gaps and foster agile technologies
+                to support the growth of various organizations. Antra’s full range
+                of workforce solutions and service delivery models equips our
+                clients with the right people, skills, and competencies required.
+            </p>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
