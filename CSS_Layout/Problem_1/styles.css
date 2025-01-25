@@ -1,4 +1,4 @@
-/* GENERAL RESET / DEFAULTS */
+/* RESET & BASE STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -8,88 +8,154 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* HEADER */
-.site-header {
+/* Overall header container:
+   Flex with two children:
+   1) .logo-section (left) 
+   2) .right-section (right) 
+*/
+.header-container {
+    display: flex;
+    background-color: #1d3354; /* Navy shade from your example */
+    color: #ffffff;
+}
+
+/* LEFT: LOGO */
+.logo-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #1c2a39; /* a dark navy color */
-    padding: 10px 20px;
-}
-
-.logo img {
-    height: 50px;
-}
-
-/* NAVIGATION */
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.main-nav li {
-    position: relative;
-}
-
-/* Top-level links */
-.main-nav > ul > li > a {
-    color: #fff;
-    text-decoration: none;
-    padding: 8px;
-    display: inline-block;
-}
-
-/* Dropdown styles */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #2f4f6c;
-    list-style: none;
+    justify-content: center;
+    padding: 0 15px;
+    width: 180px; /* Adjust as needed */
     min-width: 150px;
-    display: none; /* Hide by default */
 }
 
-.dropdown-menu li a {
-    display: block;
-    padding: 8px;
-    color: #fff;
-    text-decoration: none;
+/* The logo image size */
+.logo-section img {
+    height: 40px; /* Tweak if needed */
 }
 
-.dropdown-menu li a:hover {
-    background-color: #465f7b;
+/* RIGHT: Two stacked rows */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Fill remaining space to the right of the logo */
 }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
+/* --- TOP ROW: user + search aligned to right --- */
+.top-row {
+    display: flex;
+    justify-content: flex-end; /* push everything to the right */
+    align-items: center;
+    height: 45px; /* Adjust to your taste */
+    padding: 0 20px;
+    /* optional border-bottom: 1px solid #2b4b7a; */
 }
 
-/* USER & SEARCH */
-.user-search {
+.top-right-contents {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* space between "0", "USER", and search box */
 }
-.user-icon {
-    color: #fff;
+
+/* Notification count & user label */
+.notification-count {
+    font-weight: bold;
 }
-.user-search input {
-    padding: 5px;
+.user-label {
+    font-weight: normal;
+}
+
+/* Search container */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+.search-container input[type="text"] {
+    padding: 4px 8px;
     border-radius: 3px;
     border: 1px solid #ccc;
 }
-.user-search button {
+.search-container button {
+    margin-left: 5px;
     padding: 5px 10px;
-    background-color: #ffcc00;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    background: #ffffff;
+    color: #333;
+}
+.search-container button:hover {
+    background: #e1e1e1;
 }
 
-/* MAIN CONTENT */
-main {
-    padding: 20px;
+/* --- BOTTOM ROW: Navigation menu spread across width --- */
+.bottom-row {
+    display: flex;
+    align-items: center;
+    height: 50px; /* Adjust as needed */
+    padding: 0 20px;
+}
+
+/* The nav bar:
+   "main-menu" is a flex container that
+   spreads items evenly.
+*/
+.navbar {
+    width: 100%;
+}
+.main-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly; /* equally spaced menu items */
+    align-items: center;
+    width: 100%;
+}
+
+/* Each top-level menu item */
+.main-menu > li {
+    position: relative; /* for dropdowns */
+}
+
+/* Top-level links */
+.main-menu > li > a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    /* If you want a highlight on hover: */
+}
+.main-menu > li > a:hover {
+    background-color: #2b4b7a;
+    border-radius: 3px;
+}
+
+/* Dropdown container */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2b4b7a;
+    top: 100%; /* positions below the parent li */
+    left: 0;
+    min-width: 180px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+}
+
+/* Dropdown items */
+.dropdown-content li a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #ffffff;
+    white-space: nowrap;
+}
+.dropdown-content li a:hover {
+    background-color: #406192;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }

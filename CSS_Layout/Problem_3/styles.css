@@ -1,0 +1,150 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* ===== HEADER (Dark Blue) ===== */
+.banner {
+    background-color: #1D3354; /* Dark blue shade */
+    height: 80px;             /* Adjust as needed */
+    display: flex;
+    align-items: center;      /* Vertically center content */
+    position: relative;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;                  /* fill horizontal space */
+    padding-right: 20px;
+}
+.apply-btn {
+    background-color: #f7941d; /* Orange */
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.apply-btn:hover {
+    background-color: #e5830b;
+}
+
+/* ===== MAIN (NEWS) ===== */
+.news-container {
+    max-width: 1200px;
+    margin: 40px auto;        /* ensures it sits well below header */
+    background-color: #e1e1e1;
+    padding: 30px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* News heading */
+.news-heading {
+    font-size: 1.6rem;
+    color: #1D3354;
+    margin-bottom: 20px;
+}
+
+/* ===== FLOATING ARTICLES ===== */
+.news-card {
+    float: left;
+    width: 30%;
+    margin: 0 1% 30px 1%;  /* spacing between columns and margin at bottom */
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 15px;
+    min-height: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.news-title {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 6px;
+    position: relative;
+}
+.news-date {
+    float: right;
+    font-size: 0.9rem;
+    color: #555;
+}
+.news-publisher {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+/* Subtle <hr> lines */
+.news-card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+/* Center the image if narrower */
+.news-image {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%;
+    height: auto;
+}
+.news-description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.news-tags {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Clear the float so that .pagination appears below cards */
+.news-container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* horizontally centered */
+    gap: 2px;
+    clear: both;            /* critical: ensures pagination row won't collide with floats */
+}
+
+/* Each page is a blue “box” */
+.pagination li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3a84c1; /* Blue squares */
+    border: 1px solid #3a84c1;
+    min-width: 30px;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 2px;
+    font-size: 0.9rem;
+}
+.pagination li a:hover {
+    background-color: #66a5dd;
+    border-color: #66a5dd;
+}
+
+/* Active page is orange */
+.pagination li a.active {
+    background-color: #f7941d;
+    border-color: #f7941d;
+    color: #fff;
+}

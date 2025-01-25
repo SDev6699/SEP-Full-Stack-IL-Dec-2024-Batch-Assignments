@@ -1,0 +1,90 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ===== FOOTER GENERAL ===== */
+footer {
+    background-color: #333; /* Dark background similar to example */
+    color: #ccc;           /* Light gray text */
+    font-size: 0.9rem;
+}
+
+/* Top part of the footer (4 columns) */
+.footer-top {
+    display: flex;
+    justify-content: space-between;  /* space columns apart */
+    padding: 30px 40px;              /* top/bottom, left/right */
+}
+
+/* Each column has a bit of flexible space */
+.footer-col {
+    flex: 1;
+    margin: 0 20px;       /* spacing between columns */
+}
+
+/* Titles in each footer section */
+.footer-col h3 {
+    color: #fff;          /* white-ish for headings */
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Paragraph styles (for address) */
+.corporate-office p {
+    line-height: 1.6;
+}
+
+/* Unordered list in “Services” / “Resources” columns */
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li {
+    margin-bottom: 8px; /* spacing between links */
+}
+.footer-col ul li a {
+    text-decoration: none;
+    color: #ccc;
+}
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+/* The map or any image in “Our Locations” */
+.locations img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+/* ===== BOTTOM BAR ===== */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111; /* darker bar at the bottom */
+    padding: 15px 40px;
+}
+
+/* Left side text */
+.footer-bottom-left {
+    color: #ccc;
+}
+
+/* Right side social links */
+.footer-bottom-right a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+/* Example: if you had an icon, you can style it or keep placeholders */
+.footer-bottom-right img {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
